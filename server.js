@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content1 = {
+var articles = { 
+     'article-one' : {
     title:'article-one i sherry ',
     heading:'article-one',
     date:'aug 13 2017',
@@ -25,8 +26,8 @@ var content1 = {
                gfchgv jhb
                fdcjgvkbu
            </p> `
-};
-var content2 = {
+},
+     'article-two' : {
     title:'article-two i sherry ',
     heading:'article-two',
     date:'aug 14 2017',
@@ -46,8 +47,8 @@ var content2 = {
                gfchgv jhb
                fdcjgvkbu
            </p> `
-};
-var content3 = {
+},
+     'article-three' : {
     title:'article-three i sherry ',
     heading:'article-three',
     date:'aug 14 2017',
@@ -67,9 +68,9 @@ var content3 = {
                gfchgv jhb
                fdcjgvkbu
            </p> `
+}
+
 };
-
-
 
 function createTemplate(data)
 {
@@ -115,14 +116,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-   res.send( createTemplate(content1));
-});
-app.get('/article-two', function (req, res) {
-   res.send( createTemplate(content2));
-});
-app.get('/article-three', function (req, res) {
-   res.send( createTemplate(content3));
+app.get('/:articleName', function (req, res) {
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
 });
 
 
@@ -142,3 +138,5 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+               
+        
