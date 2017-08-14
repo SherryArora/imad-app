@@ -17,6 +17,6 @@ button.onclick = function(){
         }
         
                                             };
-    request.open('GET','https://http://arorasherry95.imad.hasura-app.io/counter',true);
+    request.open('GET','http://arorasherry95.imad.hasura-app.io/counter',true);
     request.send(null);
                            };
