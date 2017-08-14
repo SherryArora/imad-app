@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/**console.log('Loaded!');
 
 var ele = document.getElementById('mainn');
 ele.innerHTML='new value';
@@ -12,4 +12,16 @@ function moveRight(){
 img.onclick = function(){
   //img.style.marginLeft = '100px';  
   var interval = setInterval(moveRight,50);
+};*/
+//counter
+var button = document.getElementById('counter');
+button.onclick = function(){
+    // make request to counter endpoint
+    
+    //capture the response and store it in a variable
+    
+    //render the variable in the correct span
+    counter = counter + 1 ;
+    var span = document.getElementById('span');
+    span.innerHTML = counter.toString();
 };
