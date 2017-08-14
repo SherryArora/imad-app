@@ -5,13 +5,55 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content = {
+var content1 = {
     title:'article-one i sherry ',
     heading:'article-one',
     date:'aug 13 2017',
     content:` 
            <p>
+               this is conen one gfchgvhjvgv hjnfdgjhbjhbkuhbjb
+               gfchgv jhb
+               fdcjgvkbu
+           </p> 
+           <p>
                this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
+               gfchgv jhb
+               fdcjgvkbu
+           </p> 
+           <p>
+               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
+               gfchgv jhb
+               fdcjgvkbu
+           </p> `
+};
+var content2 = {
+    title:'article-two i sherry ',
+    heading:'article-two',
+    date:'aug 14 2017',
+    content:` 
+           <p>
+               this is conen two gfchgvhjvgv hjnfdgjhbjhbkuhbjb
+               gfchgv jhb
+               fdcjgvkbu
+           </p> 
+           <p>
+               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
+               gfchgv jhb
+               fdcjgvkbu
+           </p> 
+           <p>
+               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
+               gfchgv jhb
+               fdcjgvkbu
+           </p> `
+};
+var content3 = {
+    title:'article-three i sherry ',
+    heading:'article-three',
+    date:'aug 14 2017',
+    content:` 
+           <p>
+               this is conen three gfchgvhjvgv hjnfdgjhbjhbkuhbjb
                gfchgv jhb
                fdcjgvkbu
            </p> 
@@ -74,14 +116,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-   res.send( createTemplate(content));
+   res.send( createTemplate(content1));
 });
 app.get('/article-two', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+   res.send( createTemplate(content2));
 });
 app.get('/article-three', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.send( createTemplate(content3));
 });
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
