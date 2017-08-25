@@ -13,72 +13,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = { 
-     'article-one' : {
-    title:'article-one i sherry ',
-    heading:'article-one',
-    date:'aug 13 2017',
-    content:` 
-           <p>
-               this is conen one gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> 
-           <p>
-               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> 
-           <p>
-               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> `
-},
-     'article-two' : {
-    title:'article-two i sherry ',
-    heading:'article-two',
-    date:'aug 14 2017',
-    content:` 
-           <p>
-               this is conen two gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> 
-           <p>
-               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> 
-           <p>
-               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> `
-},
-     'article-three' : {
-    title:'article-three i sherry ',
-    heading:'article-three',
-    date:'aug 14 2017',
-    content:` 
-           <p>
-               this is conen three gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> 
-           <p>
-               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> 
-           <p>
-               this is conen gfchgvhjvgv hjnfdgjhbjhbkuhbjb
-               gfchgv jhb
-               fdcjgvkbu
-           </p> `
-}
 
-};
 
 function createTemplate(data)
 {
