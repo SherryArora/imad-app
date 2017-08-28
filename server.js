@@ -125,7 +125,7 @@ app.post('/login', function (req, res) {
   });
 });
 
-app.get('/chech-login', function (req, res) {
+app.get('/check-login', function (req, res) {
     if(request.session && request.session.auth && request.session.auth.userId )
     {
   res.send('You are logged in:' + request.session.auth.userId.toString());
